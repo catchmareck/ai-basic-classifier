@@ -1,19 +1,17 @@
 const Sample = require('./sample');
 
-function generateNetworkTrainigSet(sampleCount) {
+function generateNetworkTrainingSet() {
 
     console.time('generateNetworkTrainingSet');
-    var trainingSet = [];
-    for (var i = 0; i < sampleCount; i++) {
-
-        var rand1 = Math.random() * (200) - 100;
-        var rand2 = Math.random() * (200) - 100;
-        var output = [rand1 > 0 ? 1 : 0, rand2 > 0 ? 1 : 0];
-        trainingSet.push(new Sample([rand1, rand2], output));
-    }
+    const trainingSet = [
+        new Sample([1, 1], [1, 1]),     // I quarter
+        new Sample([-1, 1], [0, 1]),    // II quarter
+        new Sample([-1, -1], [0, 0]),   // III quarter
+        new Sample([1, -1], [1, 0])     // IV quarter
+    ];
     console.timeEnd('generateNetworkTrainingSet');
 
     return trainingSet;
 }
 
-module.exports = generateNetworkTrainigSet;
+module.exports = generateNetworkTrainingSet;

@@ -12,19 +12,11 @@ $ node network-demo.js
 ```
 
 ### 3. How to use the Neural Network?
-Using my Network means that you want to give your own coordinates and get the quarter which the point belongs to. Follow these three steps below and have fun.
+Using my Network means that you want to give your own coordinates and get the quarter which the point belongs to. Follow these two steps below and have fun.
 
-##### 3.1. Uncomment one of these lines in the `network-demo.js` file:
+##### 3.1 Comment out this block of code from the `network-demo.js` file:
 ```javascript
-// const weightsX = [ 749.3069003109637, 0.000029018565501637283 ], weightsY = [ -0.00029550342343753755, 551.0408346881147 ] // trained weights
-// const weightsX = [ 370.36936286936844, -0.00022006840990318466 ], weightsY = [ -0.00007773180156034343, 231.78543653548152 ] // trained weights
-```
-
-Both of the above are pretty good to use if you want to have almost ideal weights.
-
-##### 3.2 Comment out this block of code from the `network-demo.js` file:
-```javascript
-const networkTrainingSet = generateNetworkTrainingSet(1e6);
+const networkTrainingSet = generateNetworkTrainingSet();
 console.time('NetworkTrainingIterations');
 for (let i = 0; i < 3e2; i++) {
 
@@ -39,7 +31,7 @@ const networkTestSet = generateTestSet(1e7);
 network.test(networkTestSet);
 ```
 
-##### 3.3 Give your own samples to test the Network manually by using `Network.getQuarter(coords)` method:
+##### 3.2 Give your own samples to test the Network manually by using `Network.getQuarter(coords)` method:
 ```javascript
 network.getQuarter([1, 2]); // => Quarter I
 network.getQuarter([1.093, -223.7492]); // => Quarter IV

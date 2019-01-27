@@ -13,7 +13,7 @@ const percX = new Perceptron(weightsX, activationFun);
 const percY = new Perceptron(weightsY, activationFun);
 const network = new Network([percX, percY]);
 
-const networkTrainingSet = generateNetworkTrainingSet(1e6);
+const networkTrainingSet = generateNetworkTrainingSet();
 console.time('NetworkTrainingIterations');
 for (let i = 0; i < 3e2; i++) {
 
