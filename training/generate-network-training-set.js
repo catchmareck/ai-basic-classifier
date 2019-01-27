@@ -1,6 +1,8 @@
+'use strict';
+
 const Sample = require('./sample');
 
-function generateNetworkTrainingSet() {
+module.exports = () => {
 
     console.time('generateNetworkTrainingSet');
     const trainingSet = [
@@ -12,6 +14,4 @@ function generateNetworkTrainingSet() {
     console.timeEnd('generateNetworkTrainingSet');
 
     return trainingSet;
-}
-
-module.exports = generateNetworkTrainingSet;
+};

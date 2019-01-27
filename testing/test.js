@@ -1,6 +1,11 @@
-function Test(inputs) {
+'use strict';
 
-    this.inputs = inputs;
+class Test {
+
+    constructor(inputs) {
+
+        this.inputs = inputs;
+    }
 }
 
 module.exports = Test;

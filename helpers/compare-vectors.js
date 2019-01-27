@@ -1,3 +1,4 @@
+'use strict';
 
 module.exports = (vector1, vector2) => {
 

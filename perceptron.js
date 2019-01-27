@@ -1,3 +1,5 @@
+'use strict';
+
 const Stats = require('./utils/stats');
 
 class Perceptron {

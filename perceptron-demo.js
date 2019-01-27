@@ -1,3 +1,5 @@
+'use strict';
+
 const Perceptron = require('./perceptron');
 
 const generateTestSet = require('./testing/generate-test-set');

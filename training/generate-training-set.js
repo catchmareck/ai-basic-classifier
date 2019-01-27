@@ -1,6 +1,8 @@
+'use strict';
+
 const Sample = require('./sample');
 
-function generateTrainingSet() {
+module.exports = () => {
 
     console.time('generateTrainingSet');
     const trainingSet = [
@@ -12,6 +14,4 @@ function generateTrainingSet() {
     console.timeEnd('generateTrainingSet');
 
     return trainingSet;
-}
-
-module.exports = generateTrainingSet;
+};

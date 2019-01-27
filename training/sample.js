@@ -1,7 +1,12 @@
-function Sample(inputs, output) {
+'use strict';
 
-    this.inputs = inputs;
-    this.output = output;
+class Sample {
+
+    constructor(inputs, output) {
+
+        this.inputs = inputs;
+        this.output = output;
+    }
 }
 
 module.exports = Sample;
